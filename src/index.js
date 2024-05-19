@@ -116,6 +116,8 @@ function Footer() {
 function Pizza(props) {
   const { photoName, name, ingredients, price } = props.pizzaObj
 
+  if (props.pizzaObj.soldOut) return null
+
   return (
     <li className='pizza'>
       <img src={photoName} alt={name} />
